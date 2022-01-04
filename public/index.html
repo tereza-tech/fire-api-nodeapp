@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Hello world</title>
     <script type="module" src="/bundle.js"></script>
-    <script type="module" src="/bundle.ts"></script>
-    <script type="module" src="../src/index.ts"></script>
+    <script type="text/javascript"  src="./api/iced.ts"></script>
+    <script type="text/javascript"  src="./api/fire.ts"></script>
     <style>
       .mars {
         --planet-color: red;
@@ -14,6 +14,7 @@
     </style>
   </head>
   <body>
+    <button onclick="this.FakeGitHub.getUser()">LIST</button>
     <my-element></my-element>
   <hr />
   <my-element class="mars" planet="Mars"></my-element>

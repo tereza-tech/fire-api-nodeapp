@@ -1,5 +1,4 @@
 import { html, LitElement, customElement, property, css } from 'lit-element';
-import { GetCities } from '../api/fire';
 
 @customElement('bye-element')
 export default class ByeElement extends LitElement {
@@ -17,7 +16,6 @@ export default class ByeElement extends LitElement {
     `
   }
 
-  city = GetCities();
 
   @property({ type: String })
   name = 'wtf';

@@ -9,7 +9,7 @@
     "sourceMap": true,
     "inlineSources": true,
     "outDir": "./dist/",
-    "rootDir": "./src",
+    "rootDirs": ["./src", "./public/api"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -23,6 +23,6 @@
     "importHelpers": true,
     "noImplicitOverride": false,
   },
-  "include": ["src/**/*.ts", "src/api/fire.ts"],
+  "include": ["src/**/*.ts", "src/*.ts", "public/api/*.ts"],
   "exclude": [""]
 }

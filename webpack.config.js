@@ -14,24 +14,17 @@ const nodeExternals = require('webpack-node-externals');
   externals: [nodeExternals()]
 };*/
 
-const main = [
-  './src/index.ts',
-  './src/components/bye.ts',
-  './src/components/ciao.ts',
-  './src/components/heading.ts',
-  './src/api/fire.ts',
-];
 
 module.exports = {
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'], 
     extensions: ['.ts', '.js']
   },
-  devtool: 'source-map',
-  mode: 'production',
+  devtool: 'inline-source-map',
+  mode: "development",
   target: 'node',
   entry: {
-    app: ['./src'],
+    app: ['./src/'],
   },
   module: {
     rules: [
@@ -48,9 +41,8 @@ module.exports = {
     publicPath: "/"
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
-    compress: false,
-    port: 3000
+    host: '0.0.0.0',
+    allowedHosts: ['localhost', '.gitpod.io']
   },
   externals: [nodeExternals()],
   mode: "development"

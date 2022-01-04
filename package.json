@@ -4,10 +4,16 @@
   "description": "A lit-element typescript boilerplate, packed with webpack",
   "main": "dist/bundle.js",
   "scripts": {
+    "buildm": "webpack --mode=production",
+    "startm": "webpack-dev-server --mode=production",
+    "startq": "run-p -r tsc startm",
     "eslint": "eslint src/**/*.ts",
     "build": "webpack",
-    "test": "npm run build && node serve.js",
-    "dev": "webpack-dev-server"
+    "start": "node lib/server.js",
+    "tsc": "./node_modules/.bin/tsc",
+    "serve": "node public/api/fire.ts",
+    "fire": "run-p -r dev serve",
+    "super": "run-p -r build startm"
   },
   "author": "lexffe",
   "license": "MIT",
@@ -19,13 +25,14 @@
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^4.2.0",
     "express": "^4.17.1",
+    "npm-run-all": "^4.1.5",
     "ts-node-dev": "^1.0.0-pre.35",
     "tslib": "^2.3.1",
     "typescript": "^4.3.5",
-    "webpack": "^5.40.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-node-externals": "^1.7.2"
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
     "firebase": "^9.6.1",
