@@ -1,0 +1,78 @@
+[debug] [2021-12-27T10:14:37.893Z] ----------------------------------------------------------------------
+[debug] [2021-12-27T10:14:37.898Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2021-12-27T10:14:37.899Z] CLI Version:   10.0.1
+[debug] [2021-12-27T10:14:37.899Z] Platform:      win32
+[debug] [2021-12-27T10:14:37.900Z] Node Version:  v12.19.0
+[debug] [2021-12-27T10:14:37.904Z] Time:          Mon Dec 27 2021 11:14:37 GMT+0100 (GMT+01:00)
+[debug] [2021-12-27T10:14:37.904Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-27T10:14:37.991Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-27T10:14:37.992Z] > authorizing via signed-in user (tereza.tech@gmail.com)
+[debug] [2021-12-27T10:14:37.992Z] [iam] checking project apiapp for permissions ["firebase.projects.get"]
+[debug] [2021-12-27T10:14:37.996Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-27T10:14:37.996Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-27T10:14:38.173Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Mon, 27 Dec 2021 10:14:34 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:14:38.191Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apiapp:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-12-27T10:14:39.034Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Dec 2021 10:14:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=763","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:14:39.035Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project apiapp:
+
+  firebase.projects.get
+[debug] [2021-12-27T10:14:39.036Z] > refreshing access token with scopes: []
+[debug] [2021-12-27T10:14:39.036Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-27T10:14:39.116Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 27 Dec 2021 10:14:35 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:14:39.134Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/apiapp [none]
+[debug] [2021-12-27T10:14:39.512Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/apiapp 403
+[debug] [2021-12-27T10:14:39.513Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/apiapp {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-12-27T10:14:39.514Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-12-27T10:14:39.520Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Client.request (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async needProjectNumber (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\projectUtils.js:46:22)
+    at async C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project apiapp. Please make sure the project exists and your account has permission to access it.
+[debug] [2021-12-27T10:15:43.240Z] ----------------------------------------------------------------------
+[debug] [2021-12-27T10:15:43.243Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2021-12-27T10:15:43.243Z] CLI Version:   10.0.1
+[debug] [2021-12-27T10:15:43.243Z] Platform:      win32
+[debug] [2021-12-27T10:15:43.244Z] Node Version:  v12.19.0
+[debug] [2021-12-27T10:15:43.247Z] Time:          Mon Dec 27 2021 11:15:43 GMT+0100 (GMT+01:00)
+[debug] [2021-12-27T10:15:43.247Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-27T10:15:43.329Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-27T10:15:43.330Z] > authorizing via signed-in user (tereza.tech@gmail.com)
+[debug] [2021-12-27T10:15:43.330Z] [iam] checking project apiapp for permissions ["firebase.projects.get"]
+[debug] [2021-12-27T10:15:43.334Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-27T10:15:43.334Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-27T10:15:43.472Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 27 Dec 2021 10:15:39 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:15:43.489Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apiapp:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-12-27T10:15:44.238Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 27 Dec 2021 10:15:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=700","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:15:44.239Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project apiapp:
+
+  firebase.projects.get
+[debug] [2021-12-27T10:15:44.242Z] > refreshing access token with scopes: []
+[debug] [2021-12-27T10:15:44.242Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-27T10:15:44.321Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 27 Dec 2021 10:15:40 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-27T10:15:44.338Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/apiapp [none]
+[debug] [2021-12-27T10:15:44.630Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/apiapp 403
+[debug] [2021-12-27T10:15:44.630Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/apiapp {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-12-27T10:15:44.631Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-12-27T10:15:44.633Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Client.request (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async needProjectNumber (C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\projectUtils.js:46:22)
+    at async C:\Users\TQ49XT0\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project apiapp. Please make sure the project exists and your account has permission to access it.

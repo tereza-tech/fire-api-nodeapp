@@ -1,0 +1,16 @@
+import { _getProvider, getApp, _removeServiceInstance, _registerComponent, registerVersion, SDK_VERSION as SDK_VERSION$1 } from '@firebase/app';
+import { Component } from '@firebase/component';
+import { Logger, LogLevel } from '@firebase/logger';
+import { inspect, TextEncoder, TextDecoder } from 'util';
+import { createMockUserToken, getModularInstance, deepEqual, getUA, isIndexedDBAvailable, isSafari } from '@firebase/util';
+import { randomBytes as randomBytes$1 } from 'crypto';
+import pkg1 from '@grpc/grpc-js';
+const { loadPackageDefinition } = pkg1;
+import pkg2 from '@grpc/grpc-js';
+const { credentials } = pkg2;
+import pkg3 from '@grpc/grpc-js';
+const { Metadata } = pkg3;
+import { dirname, resolve, join } from 'path';
+import { fileURLToPath } from 'url';
+import pkg from '@grpc/proto-loader';
+const { loadSync } = pkg;

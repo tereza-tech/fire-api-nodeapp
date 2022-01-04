@@ -1,0 +1,36 @@
+{
+  "name": "lit-element-webpack-ts-sample",
+  "version": "0.1.1",
+  "description": "A lit-element typescript boilerplate, packed with webpack",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "eslint": "eslint src/**/*.ts",
+    "build": "webpack",
+    "test": "npm run build && node serve.js",
+    "dev": "webpack-dev-server"
+  },
+  "author": "lexffe",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.12.30",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^4.2.0",
+    "express": "^4.17.1",
+    "ts-node-dev": "^1.0.0-pre.35",
+    "tslib": "^2.3.1",
+    "typescript": "^4.3.5",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "firebase": "^9.6.1",
+    "firebase-admin": "^10.0.1",
+    "lit-element": "^2.2.1",
+    "ts-loader": "^9.2.6"
+  }
+}

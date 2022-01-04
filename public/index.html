@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+    <script type="module" src="/bundle.js"></script>
+    <script type="module" src="/bundle.ts"></script>
+    <script type="module" src="../src/index.ts"></script>
+    <style>
+      .mars {
+        --planet-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <my-element></my-element>
+  <hr />
+  <my-element class="mars" planet="Mars"></my-element>
+    <root-el></root-el>
+    <root-el2></root-el2>
+    <root-el3></root-el3>
+  </body>
+</html>
